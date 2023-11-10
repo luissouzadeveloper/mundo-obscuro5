@@ -28,8 +28,6 @@ body{
     background-color: var(--cor3);
     padding: 20px 30px;
     text-align: center;
-    position: relative;
-    z-index: 1;
 }
 .navegacao-desktop{
     background-color: var(--cor4);
@@ -65,7 +63,7 @@ body{
 
 /* Navegação mobile */
 .navegacao-mobile{
-    position: relative;
+    position: absolute;
     background-color: var(--cor3);
     display: flex;
     flex-direction: column;
@@ -73,8 +71,8 @@ body{
     padding: 5px 0;
     opacity: 0;
     transition: all 600ms ease-in-out;
-    margin-left: -15px;
-    z-index: 0;
+    margin-left: -1000px;
+    width: 100%;
 }
 .navegacao-mobile a{
     line-height: 2;
@@ -90,6 +88,46 @@ body{
     color: var(--cor2);
 }
 
+/* Conteúdos */
+.container{
+    border: 1px solid red;
+}
+.container > section{
+    padding: 0px 15px;
+    margin: 5px 0;
+}
+
+.secao h2{
+    text-align: center;
+    color: var(--cor3);
+    margin: 10px 0;
+}
+.secao figure{
+    background-color: var(--cor3);
+    padding: 15px;
+    border-radius: 7px;
+}
+.secao figure img{
+    width: 100%;
+    border-radius: 7px;
+}
+.secao figure figcaption{
+    color: var(--cor2);
+    font-weight: bold;
+    font-size: 0.7em;
+    text-align: center;
+}
+.secao h3{
+    font-size: 1.1em;
+    color: var(--cor3);
+}
+.secao p{
+    text-align: justify;
+    font-size: 0.9em;
+    margin: 15px 0;
+}
+
+/* Menu mobile */
 @media (min-width: 320px) and (max-width: 660px){
     .navegacao{
         display: none;
